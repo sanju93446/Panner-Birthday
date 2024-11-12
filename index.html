@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panner Birthday</title>
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+<body>
+    <div>
+        <MARquee>
+            <h1>HAPPY BIRTHDAY  <span>PANNER</span></h1>
+        </MARquee>
+        <div id="image-container">
+            
+                <img class="gift"  src="./images/gift.png" alt="gift box">
+            
+            <img class="gift" id="panner" src="./images/panner.jpg"/>
+        </div>
+
+    </div>
+    <audio id="audio" src="./audio/sad.mp3" preload="auto"></audio>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script >
+        const giftBox = document.querySelector('.gift');
+        const panner = document.querySelector('#panner');
+        const audio = document.querySelector('#audio');
+
+giftBox.addEventListener('click',()=>{
+    
+    confetti(
+    {
+        particleCount:100,
+        spread:70,
+        origin:{y: .6}
+    }
+ );
+ giftBox.style="display:none";
+    panner.style="display:block";
+        audio.play();
+
+})
+    </script>
+    </body>
+</html>
