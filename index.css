@@ -7,6 +7,7 @@ body{
 }
 MARquee{
     margin-bottom: 70px;
+    width:100%;
 }
 MARquee h1{
     color:red;
@@ -17,12 +18,14 @@ MARquee span{
 }
 #image-container{
     
-    width:400px;
+    width:100%;
     height:400px;
     margin:0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-y: hidden;
+    
 }
  .gift{
     height:300px;
